@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-neutral-50 text-neutral-900 font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-yellow-accent hover:bg-yellow-accent-dark text-neutral-900 font-semibold py-3 px-6 rounded-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-neutral-800 hover:bg-neutral-900 text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 ease-in-out transform hover:scale-105;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border-2 border-yellow-accent text-neutral-900 hover:bg-yellow-accent font-semibold py-3 px-6 rounded-md transition-all duration-300 ease-in-out;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply bg-white rounded-lg p-6 shadow-sm border border-neutral-200 transition-all duration-300 ease-in-out hover:shadow-md hover:border-neutral-300;
+  }
+
+  .card-elevated {
+    @apply bg-white rounded-lg p-8 shadow-md border border-neutral-200 transition-all duration-300 ease-in-out hover:shadow-lg;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
